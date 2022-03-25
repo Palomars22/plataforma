@@ -53,8 +53,8 @@ public class Program {
 			System.out.println("-------------------------------------------");
 
 		}
-		int total = soma;
-		System.out.println("DURAÇÃO TOTAL DO CURSO :" + total + " SEGUNDOS");
+		
+		System.out.println("DURAÇÃO TOTAL DO CURSO :" + soma + " SEGUNDOS");
 
 	}
 
