@@ -17,7 +17,7 @@ public class Program {
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
 
-		List<Lesson> list = new ArrayList<>();
+		List<Lesson> duration = new ArrayList<>();
 		
 		int soma = 0;
 		System.out.println("Quantas aulas tem o curso");
@@ -35,7 +35,7 @@ public class Program {
 				System.out.println("Duração em segundos:");
 				int seconds = sc.nextInt();
 				Video v = new Video(title, url, seconds);
-				list.add(v);
+				duration.add(v);
 				soma += v.duration();
 			}
 			if (x == 't') {
@@ -47,7 +47,7 @@ public class Program {
 				int question = sc.nextInt();
 
 				Task t = new Task(title1, descricao, question);
-				list.add(t);
+				duration.add(t);
 				soma += t.duration();
 			}
 			System.out.println("-------------------------------------------");
