@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Scanner;
 
+import entities.Lesson;
 import entities.Task;
 import entities.Video;
 
@@ -16,8 +17,7 @@ public class Program {
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
 
-		List<Video> listVideo = new ArrayList<>();
-		List<Task> listTask = new ArrayList<>();
+		List<Lesson> list = new ArrayList<>();
 		
 		int soma = 0;
 		System.out.println("Quantas aulas tem o curso");
@@ -35,7 +35,7 @@ public class Program {
 				System.out.println("Duração em segundos:");
 				int seconds = sc.nextInt();
 				Video v = new Video(title, url, seconds);
-				listVideo.add(v);
+				list.add(v);
 				soma += v.duration();
 			}
 			if (x == 't') {
@@ -47,7 +47,7 @@ public class Program {
 				int question = sc.nextInt();
 
 				Task t = new Task(title1, descricao, question);
-				listTask.add(t);
+				list.add(t);
 				soma += t.duration();
 			}
 			System.out.println("-------------------------------------------");
